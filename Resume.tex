@@ -1,0 +1,120 @@
+\documentclass[10pt]{article}
+\usepackage[a4paper, margin=0.9in]{geometry}
+
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+%\usepackage[big]{layaureo} 				%better formatting of the A4 page
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{textcomp} % numero
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+
+%-------------WATERMARK TEST ---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%+++++++++++++++++++++++++++ BEGIN ++++++++++++++++++++++++++++++
+\begin{document}
+\pagestyle{empty} % non-numbered pages
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%---------------------------- TITLE -----------------------------
+\par{\centering
+		{\Huge Igor \textsc{Boyarshin}
+	}\bigskip\par}
+
+%---------------------------------------------------------------------
+\section{Personal Data}
+\begin{tabular}{rl}
+    \textsc{Phone:}     & +38 050 65 27 183 \\
+    \textsc{email:}       & \href{mailto:igor.boyarshin@gmail.com}{igor.boyarshin@gmail.com} \\
+    \textsc{Github:}    & \href{https://github.com/IgorBoyarshin}{IgorBoyarshin}
+\end{tabular}
+
+%---------------------------------------------------------------------
+\section{Education}
+\begin{tabular}{rll}
+\textsc{September} 2015 & -- present & Bachelor in \textsc{Computer Engineering}, \\
+&& National Technical University of Ukraine \\
+&& ``Igor Sikorsky Kyiv Polytechnic Institute'', Kyiv, Ukraine \\
+
+\textsc{September} 2004 & -- \textsc{May} 2015 & Kyiv-Pechersky lyceum {\fontfamily{lmr}\selectfont \textnumero} 171 ``Leader'', \\
+&& Kyiv, Ukraine. \\
+&& Math specialization in middle and high school
+\end{tabular}
+
+%---------------------------------------------------------------------
+\section{Computer Skills}
+\begin{center} \large \textbf{Programming Languages} \end{center}
+\begin{tabular}{rl}
+Upper Intermediate Knowledge: & C++, Java \\
+Intermediate Knowledge: & Assembly, C, Haskell, Javascript (Typescript) \\
+Basic Knowledge: & Python, Ada, Bash \\
+\end{tabular}
+
+\begin{center} \large \textbf{Other} \end{center}
+Git, \hspace{0.3em}
+Development for \textsc{Android} platform, \hspace{0.3em}
+{\fb \LaTeX}, \hspace{0.3em}
+\textsc{Blender} (3D modelling software), \hspace{0.3em}
+HTML, CSS
+
+\begin{center} \large \textbf{Libraries\slash Frameworks} \end{center}
+STL, \hspace{0.3em}
+OpenGL 4.x, \hspace{0.3em}
+JavaFX, \hspace{0.3em}
+AngularJS
+
+\begin{center} \large \textbf{Workflow} \end{center}
+Arch Linux, \hspace{0.3em}
+Vim, \hspace{0.3em}
+tmux
+
+%---------------------------------------------------------------------
+\section{Personal Projects Worth Mentioning}
+3D graphics engine using OpenGL, Dynamic 3D Solar system model using OpenGL, Single-Page web Application for learning words (similar to \href{https://www.duolingo.com/}{Duolingo}) using AngularJS, Checkers game using JavaFX.
+
+%---------------------------------------------------------------------
+\section{Honors and Certificates}
+Diploma for the \textsc{Competitive Strategy} course on the \href{https://www.coursera.org/learn/competitive-strategy}{Coursera} platform. \par
+Prizewinner of Mathematical Olympiad for 4 consecutive years (2011-2014).
+
+%---------------------------------------------------------------------
+\section{Languages}
+\begin{tabular}{rl}
+\textsc{Ukrainian:}&Mothertongue\\
+\textsc{Russian:}	 &Mothertongue\\
+\textsc{English:}	 &Fluent\\
+\textsc{German:}	 &Basic Knowledge\\
+\end{tabular}
+
+%---------------------------------------------------------------------
+\section{Interests and Activities}
+Personal development \\
+Well-made technology, Linux and its ecosystem, FPV quadcopters \\
+Books, Volleyball, Table tennis, Cycling
+
+\end{document}

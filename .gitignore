@@ -1,0 +1,6 @@
+*.docx
+*.log
+*.aux
+*.out
+*.gz
+template.tex
